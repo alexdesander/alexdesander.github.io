@@ -40,16 +40,25 @@ body {
     height: 500px;
     width: 500px;
     z-index: 1;
-    animation: spin_right 120s linear infinite;
+    animation: spin_right 80s linear infinite;
     pointer-events: none;
 }
 
 .orbit_1 {
     height: 500px;
     width: 500px;
-    rotate: 180deg;
+    rotate: 120deg;
     z-index: 1;
-    animation: spin_right 120s linear infinite;
+    animation: spin_right 80s linear infinite;
+    pointer-events: none;
+}
+
+.orbit_2 {
+    height: 500px;
+    width: 500px;
+    rotate: 60deg;
+    z-index: 1;
+    animation: spin_right 80s linear infinite;
     pointer-events: none;
 }
 
@@ -59,11 +68,11 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #E67E22 ;
+    background-color: #FF6F61 ;
     box-shadow: 3px 3px black;
     border: 5px solid white;
     border-radius: 50%;
-    animation: spin_left 120s linear infinite;
+    animation: spin_left 80s linear infinite;
     pointer-events: all;
     color: white;
     text-decoration: none;
@@ -72,12 +81,28 @@ body {
 .elem_1 {
     width: 100px;
     height: 100px;
-    rotate: -180deg;
-    background-color: #d6a914;
+    rotate: -120deg;
+    background-color: #FF6F61;
     box-shadow: 3px 3px black;
-    border: 3px solid white;
+    border: 5px solid white;
     border-radius: 50%;
-    animation: spin_left 120s linear infinite;
+    animation: spin_left 80s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: all;
+}
+
+.elem_2 {
+    width: 100px;
+    height: 100px;
+    rotate: -60deg;
+    background-color: #FF6F61;
+    box-shadow: 3px 3px black;
+    border: 5px solid white;
+    border-radius: 50%;
+    animation: spin_left 80s linear infinite;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,6 +130,12 @@ body {
         <span class="absolute_centered" id="main_circle"></span>
         <div class="absolute_centered orbit_0">
             <a style="text-align: center; font-size: 60px;" href="about.html" class="elem_0">?</a>
+        </div>
+
+        <div class="absolute_centered orbit_2">
+            <a href="discord.html" class="elem_2">
+                <img style="width: 90%; height: 90%; filter: invert()" src="icons8-discord.svg">
+            </a>
         </div>
 
         <div class="absolute_centered orbit_1">
