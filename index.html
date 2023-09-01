@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <title>alexdesander</title>
+    <style>
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #E74C3C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.absolute_centered {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto auto;
+}
+
+#main_circle {
+  height: 300px;
+  width: 300px;
+  background-color: #3498DB;
+  box-shadow: 6px 6px black;
+  border: 10px solid white;
+  border-radius: 50%;
+  
+  z-index: 0;
+}
+
+.orbit_0 {
+    height: 500px;
+    width: 500px;
+    z-index: 1;
+    animation: spin_right 120s linear infinite;
+}
+
+.orbit_1 {
+    height: 500px;
+    width: 500px;
+    rotate: 180deg;
+    z-index: 1;
+    animation: spin_right 120s linear infinite;
+}
+
+.elem_0 {
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: #E67E22 ;
+    box-shadow: 3px 3px black;
+    border: 5px solid white;
+    border-radius: 50%;
+    animation: spin_left 120s linear infinite;
+}
+
+.elem_1 {
+    width: 100px;
+    height: 100px;
+    rotate: -180deg;
+    background-color: #d6a914;
+    box-shadow: 3px 3px black;
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: spin_left 120s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes spin_right {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin_left {
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <span class="absolute_centered" id="main_circle"></span>
+        <div class="absolute_centered orbit_0">
+            <span class="elem_0"></span>
+        </div>
+
+        <div class="absolute_centered orbit_1">
+            <a href="https://www.github.com/alexdesander" class="elem_1">
+                <img style="margin-top: -1px; margin-left: -1px; width: 102px; height: 102px;" src="github-mark-white.svg">
+            </a>
+        </div>
+    </div>
+</body>
+
