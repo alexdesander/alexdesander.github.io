@@ -41,6 +41,7 @@ body {
     width: 500px;
     z-index: 1;
     animation: spin_right 120s linear infinite;
+    pointer-events: none;
 }
 
 .orbit_1 {
@@ -49,17 +50,23 @@ body {
     rotate: 180deg;
     z-index: 1;
     animation: spin_right 120s linear infinite;
+    pointer-events: none;
 }
 
 .elem_0 {
     width: 100px;
     height: 100px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #E67E22 ;
     box-shadow: 3px 3px black;
     border: 5px solid white;
     border-radius: 50%;
     animation: spin_left 120s linear infinite;
+    pointer-events: all;
+    color: white;
+    text-decoration: none;
 }
 
 .elem_1 {
@@ -75,6 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    pointer-events: all;
 }
 
 @keyframes spin_right {
@@ -96,7 +104,7 @@ body {
     <div id="wrapper">
         <span class="absolute_centered" id="main_circle"></span>
         <div class="absolute_centered orbit_0">
-            <span class="elem_0"></span>
+            <a style="text-align: center; font-size: 60px;" href="about.html" class="elem_0">?</a>
         </div>
 
         <div class="absolute_centered orbit_1">
